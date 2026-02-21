@@ -1,0 +1,101 @@
+# IoT-Heavy IP Ranges - High Probability of Vulnerable Telnet Services
+# These ranges are known to contain DVRs, cameras, routers, and IoT devices
+
+# === CHINA TELECOM / CHINANET (Heavy IoT presence) ===
+# Known for tons of DVRs, cameras, and vulnerable devices
+58.220.0.0/16
+58.221.0.0/16
+116.62.0.0/16
+121.40.0.0/16
+121.41.0.0/16
+
+# === KOREA TELECOM (KT) - IoT heavy ===
+# Lots of cameras and DVRs
+211.36.0.0/16
+211.46.0.0/16
+
+# === TAIWAN / CHUNGHWA TELECOM ===
+# Heavy camera/DVR deployment
+60.248.0.0/16
+114.32.0.0/16
+
+# === VIETNAM / VNPT ===
+# Tons of unpatched IoT
+14.160.0.0/16
+14.161.0.0/16
+113.160.0.0/16
+
+# === THAILAND / 3BB ===
+# Residential IoT devices
+1.0.128.0/17
+1.10.0.0/16
+
+# === INDONESIA ===
+# Massive IoT deployment, often unpatched
+36.72.0.0/16
+36.74.0.0/16
+
+# === INDIA / BSNL & MTNL ===
+# Huge IoT presence, often default creds
+115.242.0.0/16
+117.192.0.0/16
+
+# === BRAZIL / TELEFONICA ===
+# Lots of home routers and cameras
+177.104.0.0/16
+187.32.0.0/16
+
+# === ARGENTINA ===
+# Known for vulnerable DVRs
+190.174.0.0/16
+
+# === MEXICO / TELMEX ===
+# Heavy residential IoT
+187.188.0.0/16
+189.240.0.0/16
+
+# === RUSSIA / ROSTELECOM ===
+# Lots of cameras and DVRs
+188.162.0.0/16
+95.84.0.0/16
+
+# === IRAN ===
+# Known for vulnerable cameras
+2.176.0.0/16
+5.118.0.0/16
+
+# === TURKEY ===
+# High density of IoT devices
+88.247.0.0/16
+176.88.0.0/16
+
+# === EGYPT ===
+# Lots of unpatched devices
+41.32.0.0/16
+197.32.0.0/16
+
+# === SOUTH AFRICA / TELKOM ===
+# Known vulnerable IoT ranges
+105.236.0.0/16
+197.84.0.0/16
+
+# === SMALLER TARGETED RANGES (High Hit Rate) ===
+# These are smaller but known to have vulnerable devices
+
+# Pakistan
+39.32.0.0/16
+
+# Bangladesh  
+103.76.0.0/16
+
+# Philippines
+112.198.0.0/16
+
+# Malaysia
+115.164.0.0/16
+
+# === SAMPLE RANGES FOR TESTING (SMALL) ===
+# Uncomment these for quick testing
+# 1.0.128.0/24
+# 58.220.1.0/24
+# 116.62.1.0/24
