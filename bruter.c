@@ -222,7 +222,8 @@ static void brute_reconnect(BruteConn *bc, int next_idx) {
     nbc->combo_idx = next_idx;
     nbc->stage = ST_CONNECTING;
     nbc->last_recv = time(NULL);
-    strncpy(nbc->address, addr, ADDR_LEN - 1);
+    memcpy(nbc->address, addr, ADDR_LEN - 1);
+    nbc->address[ADDR_LEN - 1] = 0;
 
     struct epoll_event ev;
     ev.events = EPOLLOUT | EPOLLIN | EPOLLET;
@@ -284,6 +285,7 @@ void brute_handle_data(int fd) {
     case ST_IAC:
         bc->stage = ST_WAIT_PROMPT;
         /* fall through — prompt may already be in buffer after strip_iacs */
+        __attribute__((fallthrough));
 
     case ST_WAIT_PROMPT:
         if (check_login_resp(bc)) {
