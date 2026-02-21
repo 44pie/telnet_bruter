@@ -1,0 +1,13 @@
+*.o
+*.so
+iot-bruter
+found.txt
+honeypots.txt
+*.log
+.env
+.replit
+replit.nix
+.config/
+.cache/
+.upm/
+.local/
